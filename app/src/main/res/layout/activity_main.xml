@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -8,10 +9,13 @@
     tools:context=".MainActivity">
 
     <ScrollView
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        android:layout_width="399dp"
+        android:layout_height="706dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -34,14 +38,33 @@
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:id="@+id/brand_story_layout"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10sp"
-                android:text="品牌故事"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="品牌故事"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/icon_image"
+                    android:layout_width="81dp"
+                    android:layout_height="40sp"
+                    android:clickable="true"
+                    android:contentDescription="clickhere"
+                    android:focusable="true"
+                    android:src="@drawable/click_here" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/textView2"
@@ -49,7 +72,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10sp"
                 android:text="『每個人對茶的喜好不同、但我們保證提供安全衛生的茶』  本茶廠為國內唯一全數通過農委會五星製茶廠、亮點茶莊、ISO22000、HACCP、產銷履歷和日月潭紅茶產地證明標章的製茶廠，所有製茶設備和環境皆為國內一時之選，我們致力將日月潭紅茶推向國際，其中的奧妙之處歡迎前來參觀了解。  除製茶廠外，園區遊賞項目眾多，除了耗費四天熬煮的紅茶蛋外，手工冰淇淋、百年紅茶樹和百萬五葉松皆為本園區觀賞重點，除此之外還有揉茶和品茗等DIY體驗，我們結合觀光與教育，以期用寓教於樂的方式為推廣日月潭紅茶盡一份心力。  "
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:visibility="gone" />
+            <!--            隱藏狀態gone-->
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
