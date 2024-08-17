@@ -61,13 +61,17 @@ public class MainActivity extends AppCompatActivity {
         runnable = new Runnable() {
             @Override
             public void run() {
+                // 設置圖片切換時間
+                int delay = (currentIndex == 0) ? 5000 : 5000;
+
                 // 切換到下一張圖片
                 currentIndex = (currentIndex + 1) % imageArray.length;
+
                 // 設置淡入淡出效果
                 fadeOutAndInImage(imageArray[currentIndex]);
 
-                // 每3秒自動切換一次圖片
-                handler.postDelayed(this, 5000);
+                // 設置延遲以實現定時切換
+                handler.postDelayed(this, delay);
             }
         };
 
