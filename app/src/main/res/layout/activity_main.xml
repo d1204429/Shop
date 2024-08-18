@@ -172,7 +172,7 @@
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:id="@+id/imageView3"
+                            android:id="@+id/internetImageView"
                             android:layout_width="0dp"
                             android:layout_height="70sp"
                             android:layout_weight="1"
@@ -180,7 +180,7 @@
                             app:srcCompat="@drawable/internet" />
 
                         <ImageView
-                            android:id="@+id/imageView4"
+                            android:id="@+id/facebookImageView"
                             android:layout_width="0dp"
                             android:layout_height="70sp"
                             android:layout_weight="1"
@@ -188,7 +188,7 @@
                             app:srcCompat="@drawable/facebook" />
 
                         <ImageView
-                            android:id="@+id/imageView8"
+                            android:id="@+id/instagramImageView"
                             android:layout_width="0dp"
                             android:layout_height="75sp"
                             android:layout_weight="1"
@@ -196,7 +196,7 @@
                             app:srcCompat="@drawable/instagram" />
 
                         <ImageView
-                            android:id="@+id/imageView9"
+                            android:id="@+id/shopeeImageView"
                             android:layout_width="0dp"
                             android:layout_height="70sp"
                             android:layout_weight="1"
