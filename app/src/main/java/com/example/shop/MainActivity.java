@@ -162,17 +162,19 @@ public class MainActivity extends AppCompatActivity {
         fadeOut.start();
     }
 
-//    private void openWebPage(String url) {
-//        Uri webpage = Uri.parse(url);
-//        Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
-//        if (intent.resolveActivity(getPackageManager()) != null) {
-//            startActivity(intent);
-//        }
-//    }
+    public void goToMap(View view){
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse("geo:)0,0?q=喝喝茶"));
+        startActivity(i);
+    }
 
+    public void clickCall(View view){
+        Intent i = new Intent();
+        i.setAction(Intent.ACTION_DIAL);
+        i.setData(Uri.parse("tel:0492895899"));
+        startActivity(i);
 
-
-
+    }
 
 
 }
